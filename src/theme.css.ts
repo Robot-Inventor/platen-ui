@@ -1,4 +1,4 @@
-import { createGlobalTheme } from "@vanilla-extract/css";
+import { type StyleRule, createGlobalTheme } from "@vanilla-extract/css";
 
 const vars = createGlobalTheme(":root", {
     animation: {
@@ -10,34 +10,56 @@ const vars = createGlobalTheme(":root", {
     },
 
     color: {
-        background: "#1a1c1f",
-        backgroundVariant: "#0d0d0d",
-        backgroundVariantRaised: "#111",
-        border: "#000",
-        error: "#af6060",
-        errorBackground: "#402a2a",
-        onBackground: "#c2c7cc",
-        onBackgroundVariant: "#8e9296",
-        primary: "#24466b",
-        primaryContainer: "#2e3d4f",
-        primaryVariant: "#3b5e84",
-        surface: "#222529",
-        surfaceVariant: "#2c2f33",
-        surfaceVariantRaised: "#393e43"
-    },
-    preset: {
-        focusVisible: {
-            ":focus-visible": {
-                outline: "2px solid #83a9d3"
+        semantic: {
+            background: {
+                error: "#402a2a",
+                neutral: "rgb(66 73 81 / 20%)",
+                neutralHover: "rgb(206 218 231 / 10%)",
+                primary: "#24466b",
+                primaryHover: "#3b5e84",
+                sunken: "rgb(4 3 1 / 60%)",
+                sunkenHover: "rgb(8 6 3 / 50%)"
+            },
+
+            border: {
+                default: "#000000"
+            },
+
+            surface: {
+                default: "#1a1c1f"
+            },
+
+            text: {
+                default: "#c2c7cc",
+                error: "#af6060",
+                subtle: "#8e9296"
             }
         }
     },
+
     shadow: {
         overlay: "0 4px 16px rgba(0, 0, 0, 0.5)"
     },
+
     size: {
-        borderRadiusSmall: "0.25rem"
+        semantic: {
+            borderRadiusSmall: "0.25rem"
+        }
     }
 });
 
-export { vars };
+const tokens = {
+    border: {
+        default: `1px solid ${vars.color.semantic.border.default}`
+    }
+} as const;
+
+const mixins = {
+    focusVisible: {
+        ":focus-visible": {
+            outline: "2px solid #83a9d3"
+        }
+    }
+} as const satisfies Record<string, StyleRule>;
+
+export { vars, tokens, mixins };

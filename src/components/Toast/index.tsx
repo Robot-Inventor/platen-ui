@@ -53,8 +53,8 @@ const Toaster = (): ReactNode => {
                             <BaseToast.Title className={titleStyles} />
                             <BaseToast.Description className={descriptionStyles} />
                             <div className={actionsStyles}>
-                                {item.actionProps && <BaseToast.Action render=<Button elevated /> />}
-                                <BaseToast.Close render={<Button elevated>OK</Button>} />
+                                {item.actionProps && <BaseToast.Action render=<Button /> />}
+                                <BaseToast.Close render={<Button>OK</Button>} />
                             </div>
                         </BaseToast.Content>
                     </BaseToast.Root>

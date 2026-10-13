@@ -1,5 +1,5 @@
+import { mixins, tokens, vars } from "../../theme.css";
 import { style } from "@vanilla-extract/css";
-import { vars } from "../../theme.css";
 
 const containerStyles = style({
     alignItems: "center",
@@ -16,16 +16,16 @@ const TRIGGER_PADDING_BLOCK = "0.25rem";
 const TRIGGER_BORDER_WIDTH = "1px";
 
 const selectStyles = style({
-    ...vars.preset.focusVisible,
+    ...mixins.focusVisible,
 
     ":hover": {
-        background: vars.color.surfaceVariant
+        background: vars.color.semantic.background.neutralHover
     },
 
-    background: vars.color.surface,
-    border: `${TRIGGER_BORDER_WIDTH} solid ${vars.color.border}`,
-    borderRadius: vars.size.borderRadiusSmall,
-    color: vars.color.onBackground,
+    background: vars.color.semantic.background.neutral,
+    border: `${TRIGGER_BORDER_WIDTH} solid ${vars.color.semantic.border.default}`,
+    borderRadius: vars.size.semantic.borderRadiusSmall,
+    color: vars.color.semantic.text.default,
     cursor: "pointer",
     // Keep the trigger at one line of text even when empty, so loading a
     // device list never shifts the layout below.
@@ -35,11 +35,11 @@ const selectStyles = style({
 });
 
 const popupStyles = style({
-    background: vars.color.surface,
-    border: `1px solid ${vars.color.border}`,
-    borderRadius: vars.size.borderRadiusSmall,
+    background: vars.color.semantic.background.neutral,
+    border: tokens.border.default,
+    borderRadius: vars.size.semantic.borderRadiusSmall,
     boxShadow: vars.shadow.overlay,
-    color: vars.color.onBackground,
+    color: vars.color.semantic.text.default,
     cursor: "pointer",
     overflow: "hidden",
     width: "var(--anchor-width)"
@@ -55,7 +55,7 @@ const textStyles = style({
     overflow: "hidden",
     selectors: {
         "&[data-placeholder]": {
-            color: vars.color.onBackgroundVariant
+            color: vars.color.semantic.text.subtle
         }
     },
     textOverflow: "ellipsis",
@@ -64,21 +64,21 @@ const textStyles = style({
 
 const itemStyles = style({
     ":focus-visible": {
-        ...vars.preset.focusVisible[":focus-visible"],
-        background: vars.color.surfaceVariant,
-        borderRadius: vars.size.borderRadiusSmall,
+        ...mixins.focusVisible[":focus-visible"],
+        background: vars.color.semantic.background.neutralHover,
+        borderRadius: vars.size.semantic.borderRadiusSmall,
         outlineOffset: "-2px"
     },
 
     ":hover": {
-        background: vars.color.surfaceVariant
+        background: vars.color.semantic.background.neutralHover
     },
 
     padding: "0.25rem 1rem"
 });
 
 const groupLabelStyles = style({
-    color: vars.color.onBackgroundVariant,
+    color: vars.color.semantic.text.subtle,
     padding: "0.5rem 1rem 0.25rem"
 });
 

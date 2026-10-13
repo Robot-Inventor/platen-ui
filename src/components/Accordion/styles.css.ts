@@ -1,20 +1,20 @@
 import { keyframes, style } from "@vanilla-extract/css";
-import { vars } from "../../theme.css";
+import { mixins, tokens, vars } from "../../theme.css";
 
 const itemStyles = style({
     ":hover": {
-        background: vars.color.surfaceVariant
+        background: vars.color.semantic.background.neutralHover
     },
 
-    background: vars.color.surface,
-    border: `1px solid ${vars.color.border}`,
+    background: vars.color.semantic.background.neutral,
+    border: tokens.border.default,
 
     selectors: {
         "&:first-child": {
-            borderRadius: `${vars.size.borderRadiusSmall} ${vars.size.borderRadiusSmall} 0 0`
+            borderRadius: `${vars.size.semantic.borderRadiusSmall} ${vars.size.semantic.borderRadiusSmall} 0 0`
         },
         "&:last-child": {
-            borderRadius: `0 0 ${vars.size.borderRadiusSmall} ${vars.size.borderRadiusSmall}`
+            borderRadius: `0 0 ${vars.size.semantic.borderRadiusSmall} ${vars.size.semantic.borderRadiusSmall}`
         },
         "&:not(:first-child)": {
             borderTop: "none"
@@ -23,9 +23,9 @@ const itemStyles = style({
 });
 
 const triggerStyles = style({
-    ...vars.preset.focusVisible,
+    ...mixins.focusVisible,
 
-    borderRadius: vars.size.borderRadiusSmall,
+    borderRadius: vars.size.semantic.borderRadiusSmall,
     cursor: "pointer",
     padding: "0.5rem 1rem",
     position: "relative",

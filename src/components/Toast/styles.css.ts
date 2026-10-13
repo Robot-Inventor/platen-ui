@@ -1,5 +1,5 @@
+import { tokens, vars } from "../../theme.css";
 import { style } from "@vanilla-extract/css";
-import { vars } from "../../theme.css";
 
 const viewportStyles = style({
     bottom: 0,
@@ -30,11 +30,11 @@ const rootStyles = style({
 });
 
 const contentStyles = style({
-    background: vars.color.surface,
-    border: `1px solid ${vars.color.border}`,
-    borderRadius: vars.size.borderRadiusSmall,
+    background: vars.color.semantic.background.neutral,
+    border: tokens.border.default,
+    borderRadius: vars.size.semantic.borderRadiusSmall,
     boxShadow: vars.shadow.overlay,
-    color: vars.color.onBackgroundVariant,
+    color: vars.color.semantic.text.subtle,
     display: "grid",
     gap: "0 1rem",
     gridTemplateColumns: "auto auto",
@@ -43,14 +43,14 @@ const contentStyles = style({
     padding: "0.5rem 1rem",
     selectors: {
         [`${rootStyles}[data-type="error"] &`]: {
-            background: vars.color.errorBackground,
-            color: vars.color.onBackground
+            background: vars.color.semantic.background.error,
+            color: vars.color.semantic.text.default
         }
     }
 });
 
 const titleStyles = style({
-    color: vars.color.onBackground,
+    color: vars.color.semantic.text.default,
     fontWeight: "bold",
     gridColumn: "1 / 2",
     gridRow: "1 / 2"

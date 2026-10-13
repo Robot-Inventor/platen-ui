@@ -1,18 +1,18 @@
+import { mixins, tokens, vars } from "../../theme.css";
 import { style } from "@vanilla-extract/css";
-import { vars } from "../../theme.css";
 
 const buttonStyles = style({
-    ...vars.preset.focusVisible,
+    ...mixins.focusVisible,
 
     ":hover": {
-        background: vars.color.surfaceVariant
+        background: vars.color.semantic.background.neutralHover
     },
 
     alignItems: "center",
-    background: vars.color.surface,
-    border: `1px solid ${vars.color.border}`,
-    borderRadius: vars.size.borderRadiusSmall,
-    color: vars.color.onBackground,
+    background: vars.color.semantic.background.neutral,
+    border: tokens.border.default,
+    borderRadius: vars.size.semantic.borderRadiusSmall,
+    color: vars.color.semantic.text.default,
     cursor: "pointer",
     display: "flex",
     gap: "0.25rem",
@@ -22,25 +22,17 @@ const buttonStyles = style({
 
     selectors: {
         "&[data-disabled]": {
-            background: vars.color.background,
-            color: vars.color.onBackgroundVariant,
+            background: "transparent",
+            color: vars.color.semantic.text.subtle,
             cursor: "not-allowed",
             opacity: 0.5
         },
         "&[data-disabled]:hover": {
-            background: vars.color.background
+            background: "transparent"
         }
     },
 
     whiteSpace: "nowrap"
 });
 
-const elevatedButtonStyles = style({
-    ":hover": {
-        background: vars.color.surfaceVariantRaised
-    },
-
-    background: vars.color.surfaceVariant
-});
-
-export { buttonStyles, elevatedButtonStyles };
+export { buttonStyles };

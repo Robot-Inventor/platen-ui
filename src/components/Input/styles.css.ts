@@ -1,5 +1,5 @@
+import { mixins, tokens, vars } from "../../theme.css";
 import { style } from "@vanilla-extract/css";
-import { vars } from "../../theme.css";
 
 const inputWrapperStyles = style({
     display: "block",
@@ -7,20 +7,20 @@ const inputWrapperStyles = style({
 });
 
 const inputStyles = style({
-    ...vars.preset.focusVisible,
+    ...mixins.focusVisible,
 
-    background: vars.color.backgroundVariant,
-    border: `1px solid ${vars.color.border}`,
-    borderRadius: vars.size.borderRadiusSmall,
+    background: vars.color.semantic.background.sunken,
+    border: tokens.border.default,
+    borderRadius: vars.size.semantic.borderRadiusSmall,
     display: "block",
     padding: "0.25rem 1.75rem 0.25rem 0.5rem",
 
     selectors: {
         "&::placeholder": {
-            color: vars.color.onBackgroundVariant
+            color: vars.color.semantic.text.subtle
         },
         [`${inputWrapperStyles}:hover &`]: {
-            background: vars.color.backgroundVariantRaised
+            background: vars.color.semantic.background.sunkenHover
         }
     },
 
@@ -28,14 +28,14 @@ const inputStyles = style({
 });
 
 const clearButtonStyles = style({
-    ...vars.preset.focusVisible,
+    ...mixins.focusVisible,
 
     ":hover": {
-        color: vars.color.onBackground
+        color: vars.color.semantic.text.default
     },
 
     alignItems: "center",
-    color: vars.color.onBackgroundVariant,
+    color: vars.color.semantic.text.subtle,
     cursor: "pointer",
     display: "flex",
     justifyContent: "center",

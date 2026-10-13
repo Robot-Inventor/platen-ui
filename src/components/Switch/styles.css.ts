@@ -1,15 +1,15 @@
+import { mixins, tokens, vars } from "../../theme.css";
 import { style } from "@vanilla-extract/css";
-import { vars } from "../../theme.css";
 
 const rootStyles = style({
-    ...vars.preset.focusVisible,
+    ...mixins.focusVisible,
 
     ":hover": {
-        background: vars.color.surfaceVariant
+        background: vars.color.semantic.background.neutralHover
     },
 
-    background: vars.color.surface,
-    border: `1px solid ${vars.color.border}`,
+    background: vars.color.semantic.background.neutral,
+    border: tokens.border.default,
     borderRadius: "9999px",
     cursor: "pointer",
     height: "1.5rem",
@@ -17,10 +17,10 @@ const rootStyles = style({
 
     selectors: {
         "&[data-checked]": {
-            background: vars.color.primary
+            background: vars.color.semantic.background.primary
         },
         "&[data-checked]:hover": {
-            background: vars.color.primaryVariant
+            background: vars.color.semantic.background.primaryHover
         }
     },
 
@@ -28,7 +28,7 @@ const rootStyles = style({
 });
 
 const thumbStyles = style({
-    background: vars.color.onBackground,
+    background: vars.color.semantic.text.default,
     borderRadius: "9999px",
     display: "block",
     height: "1.25rem",

@@ -1,8 +1,8 @@
 import { keyframes, style } from "@vanilla-extract/css";
-import { vars } from "../../theme.css";
+import { tokens, vars } from "../../theme.css";
 
 const labelContainerStyles = style({
-    color: vars.color.onBackgroundVariant,
+    color: vars.color.semantic.text.subtle,
     display: "flex",
     fontSize: "0.85rem",
     fontVariantNumeric: "tabular-nums",
@@ -17,9 +17,9 @@ const labelStyles = style({
 });
 
 const trackStyles = style({
-    background: vars.color.backgroundVariant,
-    border: `1px solid ${vars.color.border}`,
-    borderRadius: vars.size.borderRadiusSmall,
+    background: vars.color.semantic.background.sunken,
+    border: tokens.border.default,
+    borderRadius: vars.size.semantic.borderRadiusSmall,
     height: "0.375rem",
     overflow: "hidden"
 });
@@ -50,8 +50,8 @@ const indeterminateAnimation = keyframes({
 });
 
 const indicatorStyles = style({
-    background: vars.color.primary,
-    borderRadius: vars.size.borderRadiusSmall,
+    background: vars.color.semantic.background.primary,
+    borderRadius: vars.size.semantic.borderRadiusSmall,
     height: "100%",
 
     selectors: {
