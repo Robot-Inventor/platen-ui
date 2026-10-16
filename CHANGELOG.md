@@ -1,5 +1,11 @@
 # platen-ui
 
+## 0.1.3
+
+### Patch Changes
+
+- [#12](https://github.com/Robot-Inventor/platen-ui/pull/12) [`94b3b0d`](https://github.com/Robot-Inventor/platen-ui/commit/94b3b0dc3bc37fffb24957a1e07e406a18bf1cc3) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - fix: fix an issue where the toast background would become transparent
+
 ## 0.1.2
 
 ### Patch Changes
