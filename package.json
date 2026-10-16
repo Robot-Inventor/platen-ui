@@ -13,6 +13,9 @@
   "license": "MIT",
   "author": "Robot-Inventor",
   "type": "module",
+  "publishConfig": {
+    "provenance": true
+  },
   "exports": {
     "./Accordion": {
       "import": "./dist/components/Accordion.js",
@@ -51,9 +54,13 @@
     "lint": "tsc --noEmit && knip && oxlint src",
     "format": "prettier --write src",
     "format:check": "prettier --check src",
-    "build": "tsdown --minify"
+    "build": "tsdown --minify",
+    "ci:version": "changeset version",
+    "ci:publish": "bun run build && changeset publish"
   },
   "devDependencies": {
+    "@changesets/changelog-github": "^1.0.1",
+    "@changesets/cli": "^3.0.3",
     "@robot-inventor/oxlint-config": "^0.5.1",
     "@robot-inventor/tsconfig-base": "^7.2.0",
     "@types/react": "^19.3.0",
