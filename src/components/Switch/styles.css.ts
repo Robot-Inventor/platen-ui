@@ -12,6 +12,7 @@ const rootStyles = style({
     border: tokens.border.default,
     borderRadius: "9999px",
     cursor: "pointer",
+    display: "inline-block",
     height: "1.5rem",
     position: "relative",
 
