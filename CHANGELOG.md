@@ -1,5 +1,14 @@
 # platen-ui
 
+## 0.1.2
+
+### Patch Changes
+
+- [#10](https://github.com/Robot-Inventor/platen-ui/pull/10) [`6ff7361`](https://github.com/Robot-Inventor/platen-ui/commit/6ff7361a5abe02c6fdeee1ee61c758330a856619) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - fix: update styles for the Select component
+
+    - Fix an issue where the background was transparent
+    - Adjust item padding
+
 ## 0.1.1
 
 ### Patch Changes
