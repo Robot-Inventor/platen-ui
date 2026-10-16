@@ -16,6 +16,7 @@
   "publishConfig": {
     "provenance": true
   },
+  "files": ["dist"],
   "exports": {
     "./Accordion": {
       "import": "./dist/components/Accordion.js",
