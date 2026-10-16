@@ -35,7 +35,7 @@ const selectStyles = style({
 });
 
 const popupStyles = style({
-    background: vars.color.semantic.background.neutral,
+    background: vars.color.semantic.surface.default,
     border: tokens.border.default,
     borderRadius: vars.size.semantic.borderRadiusSmall,
     boxShadow: vars.shadow.overlay,
@@ -46,8 +46,7 @@ const popupStyles = style({
 });
 
 const listStyles = style({
-    maxHeight: "var(--available-height)",
-    overflowY: "auto"
+    background: vars.color.semantic.background.neutral
 });
 
 const textStyles = style({
@@ -74,7 +73,13 @@ const itemStyles = style({
         background: vars.color.semantic.background.neutralHover
     },
 
-    padding: "0.25rem 1rem"
+    padding: "0.25rem 1rem",
+
+    selectors: {
+        "&:last-child": {
+            paddingBottom: "0.5rem"
+        }
+    }
 });
 
 const groupLabelStyles = style({
