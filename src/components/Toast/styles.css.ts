@@ -13,6 +13,8 @@ const viewportStyles = style({
 });
 
 const rootStyles = style({
+    background: vars.color.semantic.surface.default,
+
     selectors: {
         "&[data-ending-style]": {
             opacity: 0,
