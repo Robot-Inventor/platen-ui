@@ -34,6 +34,10 @@
       "import": "./dist/components/Input.js",
       "types": "./dist/components/Input.d.ts"
     },
+    "./Meter": {
+      "import": "./dist/components/Meter.js",
+      "types": "./dist/components/Meter.d.ts"
+    },
     "./Progress": {
       "import": "./dist/components/Progress.js",
       "types": "./dist/components/Progress.d.ts"
