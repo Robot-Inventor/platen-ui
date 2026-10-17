@@ -1,5 +1,11 @@
 # platen-ui
 
+## 0.2.0
+
+### Minor Changes
+
+- [#15](https://github.com/Robot-Inventor/platen-ui/pull/15) [`79bba40`](https://github.com/Robot-Inventor/platen-ui/commit/79bba40feadfff13585c1e237575fc0cb33e44e1) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: expose the theme from the package root
+
 ## 0.1.3
 
 ### Patch Changes
