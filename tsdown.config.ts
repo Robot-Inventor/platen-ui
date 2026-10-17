@@ -14,7 +14,8 @@ const config = defineConfig({
         "components/Progress": "./src/components/Progress/index.tsx",
         "components/Select": "./src/components/Select/index.tsx",
         "components/Switch": "./src/components/Switch/index.tsx",
-        "components/Toast": "./src/components/Toast/index.tsx"
+        "components/Toast": "./src/components/Toast/index.tsx",
+        theme: "./src/theme.css.ts"
     },
     format: "esm",
     outputOptions: {

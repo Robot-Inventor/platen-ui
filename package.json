@@ -18,6 +18,10 @@
   },
   "files": ["dist"],
   "exports": {
+    ".": {
+      "import": "./dist/theme.js",
+      "types": "./dist/theme.d.ts"
+    },
     "./Accordion": {
       "import": "./dist/components/Accordion.js",
       "types": "./dist/components/Accordion.d.ts"
@@ -49,7 +53,8 @@
   },
   "sideEffects": [
     "**/*.css",
-    "**/*.styles.js"
+    "**/*.styles.js",
+    "**/theme.js"
   ],
   "scripts": {
     "lint": "tsc --noEmit && knip && oxlint src",
