@@ -11,6 +11,7 @@ const config = defineConfig({
         "components/Accordion": "./src/components/Accordion/index.tsx",
         "components/Button": "./src/components/Button/index.tsx",
         "components/Input": "./src/components/Input/index.tsx",
+        "components/Meter": "./src/components/Meter/index.tsx",
         "components/Progress": "./src/components/Progress/index.tsx",
         "components/Select": "./src/components/Select/index.tsx",
         "components/Switch": "./src/components/Switch/index.tsx",
