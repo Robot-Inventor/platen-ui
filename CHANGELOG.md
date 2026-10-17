@@ -1,5 +1,11 @@
 # platen-ui
 
+## 0.3.0
+
+### Minor Changes
+
+- [#17](https://github.com/Robot-Inventor/platen-ui/pull/17) [`d3d0b4d`](https://github.com/Robot-Inventor/platen-ui/commit/d3d0b4d55e3b04f966e77cb1258bcf6859885331) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: add `<Meter>` component
+
 ## 0.2.0
 
 ### Minor Changes
