@@ -6,17 +6,21 @@
   "bugs": {
     "url": "https://github.com/Robot-Inventor/platen-ui/issues"
   },
+  "license": "MIT",
+  "author": "Robot-Inventor",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Robot-Inventor/platen-ui.git"
   },
-  "license": "MIT",
-  "author": "Robot-Inventor",
+  "files": [
+    "dist"
+  ],
   "type": "module",
-  "publishConfig": {
-    "provenance": true
-  },
-  "files": ["dist"],
+  "sideEffects": [
+    "**/*.css",
+    "**/*.styles.js",
+    "**/theme.js"
+  ],
   "exports": {
     ".": {
       "import": "./dist/theme.js",
@@ -55,18 +59,20 @@
       "types": "./dist/components/Toast.d.ts"
     }
   },
-  "sideEffects": [
-    "**/*.css",
-    "**/*.styles.js",
-    "**/theme.js"
-  ],
+  "publishConfig": {
+    "provenance": true
+  },
   "scripts": {
     "lint": "tsc --noEmit && knip && oxlint src",
-    "format": "prettier --write src",
-    "format:check": "prettier --check src",
+    "format": "oxfmt --write src",
+    "format:check": "oxfmt --check src",
     "build": "tsdown --minify",
     "ci:version": "changeset version",
     "ci:publish": "bun run build && changeset publish"
+  },
+  "dependencies": {
+    "@base-ui/react": "^1.9.0",
+    "lucide-react": "^1.55.0"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^1.0.1",
@@ -80,15 +86,11 @@
     "@vitejs/plugin-react": "^6.1.2",
     "knip": "^6.41.0",
     "oxc-transform-react": "^0.155.0",
+    "oxfmt": "^0.74.0",
     "oxlint": "^1.87.0",
-    "prettier": "^3.9.10",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
     "tsdown": "^0.23.1",
     "typescript": "^7.0.2"
-  },
-  "dependencies": {
-    "@base-ui/react": "^1.9.0",
-    "lucide-react": "^1.55.0"
   }
 }
