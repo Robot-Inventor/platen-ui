@@ -3,9 +3,7 @@ import { style } from "@vanilla-extract/css";
 
 const containerStyles = style({
     alignItems: "center",
-    display: "grid",
-    gridColumn: "1 / -1",
-    gridTemplateColumns: "subgrid"
+    display: "grid"
 });
 
 const labelStyles = style({
