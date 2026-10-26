@@ -10,6 +10,7 @@ import {
     textStyles
 } from "./styles.css";
 import { Select as BaseSelect } from "@base-ui/react/select";
+import { mergeClassNames } from "../../mergeClassNames";
 
 interface SelectOption {
     value: string;
@@ -28,11 +29,20 @@ interface SelectProps {
     value: string | null;
     onValueChange: (value: string | null) => void;
     onOpenChange?: (open: boolean) => void;
+    className?: string | undefined;
 }
 
 const isGroup = (item: SelectOption | SelectGroup): item is SelectGroup => "options" in item;
 
-const Select = ({ options, label, placeholder, value, onValueChange, onOpenChange }: SelectProps): ReactElement => {
+const Select = ({
+    options,
+    label,
+    placeholder,
+    value,
+    onValueChange,
+    onOpenChange,
+    className
+}: SelectProps): ReactElement => {
     const [open, setOpen] = useState(false);
     const flatOptions = options.flatMap((item) => (isGroup(item) ? item.options : [item]));
 
@@ -55,7 +65,7 @@ const Select = ({ options, label, placeholder, value, onValueChange, onOpenChang
             open={open}
             onOpenChange={handleOpenChange}
         >
-            <div className={containerStyles}>
+            <div className={mergeClassNames(containerStyles, className)}>
                 <BaseSelect.Label
                     className={labelStyles}
                     onClick={(event) => {
