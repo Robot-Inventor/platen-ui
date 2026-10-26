@@ -1,5 +1,11 @@
 # platen-ui
 
+## 0.4.0
+
+### Minor Changes
+
+- [#20](https://github.com/Robot-Inventor/platen-ui/pull/20) [`82f506a`](https://github.com/Robot-Inventor/platen-ui/commit/82f506aa163296b4d74b40e47baba06c034e0114) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: add `className` prop to `<Select>` and remove subgrid participation from its container
+
 ## 0.3.0
 
 ### Minor Changes
