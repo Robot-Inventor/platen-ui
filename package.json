@@ -85,7 +85,7 @@
     "@vanilla-extract/rollup-plugin": "^1.5.4",
     "@vitejs/plugin-react": "^6.1.2",
     "knip": "^6.41.0",
-    "oxc-transform-react": "^0.155.0",
+    "oxc-transform-react": "^0.156.0",
     "oxfmt": "^0.74.0",
     "oxlint": "^1.87.0",
     "react": "^19.3.0",
