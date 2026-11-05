@@ -9,6 +9,7 @@ import {
     selectStyles,
     textStyles
 } from "./styles.css";
+// oxlint-disable-next-line roboin/logical-newline
 import { Select as BaseSelect } from "@base-ui/react/select";
 import { mergeClassNames } from "../../mergeClassNames";
 
