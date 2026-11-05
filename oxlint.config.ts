@@ -1,3 +1,3 @@
-import { oxlintReactConfigNoJSDoc } from "@robot-inventor/oxlint-config";
+import { oxlintReactConfig } from "@robot-inventor/oxlint-config";
 
-export default oxlintReactConfigNoJSDoc;
+export default oxlintReactConfig;
